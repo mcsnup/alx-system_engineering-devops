@@ -34,24 +34,24 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend superstaz-frontend
+frontend mcsnup-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend superstaz-backend
+        default_backend mcsnup-backend
 
 frontend superstaz-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/superstaz.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/mcsnup.tech.pem
 	 http-request set-header X-Forwarded-Proto https
-        default_backend superstaz-backend
+        default_backend mcsnup-backend
 
-backend superstaz-tech-backend
+backend mcsnup-tech-backend
         balance roundrobin
         server 221354-web-01 54.158.208.205:80 check
         server 221354-web-02 18.234.145.147:80 check
 
-backend superstaz-tech-backend-https
+backend mcsnup-tech-backend-https
         balance roundrobin
         server 221354-web-01 54.158.208.205:80 check
         server 221354-web-02 18.234.145.147:80 check
