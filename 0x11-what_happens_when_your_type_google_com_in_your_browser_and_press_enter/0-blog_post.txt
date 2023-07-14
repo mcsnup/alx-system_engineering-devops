@@ -1,4 +1,5 @@
-To answer this question in a simple and detailed manner, lets take a look at this word called server, which we would use alot in this article
+In this arcticle, we would be looking at explaining certain I.T and web_base concept a simple and detailed manner,
+the topic discuss within the arcticle is inexhaustible and as such i can not, as such this discuss cannot claim to be the ultimate however it is written to remain as a guide to further studing for everyone interested in the mechanism of the topic discussed herein. We would use the word SERVER a lot in this writing so it make to start by start by defining what a server is. 
 
 What’s a Server?
 A server is a computer program or device that provides a service to another computer program and its user, also known as the client. This architecture is called the client–server model.
